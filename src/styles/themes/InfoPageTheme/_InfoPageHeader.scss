@@ -1,0 +1,73 @@
+@import '../../base/variables';
+
+@mixin InfoPageHeader {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        gap: 1.5rem;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .header__title {
+            flex: 1;
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header__options {
+            display: flex;
+            gap: 1;
+
+            .options__button {
+                width: max-content;
+                height: max-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                padding: 10px 16px;
+                border-radius: 8px;
+                font-size: 10px;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+                background-color: $fourthAccentColor;
+                color: white;
+                margin-right: 0.5rem;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                cursor: pointer;
+                transition: $primaryTransition;     
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 0px;
+                    background-color: $accentBgColor;
+                    transition: $primaryTransition;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                }
+            
+                &:hover {
+                    transform: translateY(6px);
+                    color: $fourthAccentColor;
+                    
+                    &::after {
+                        width: 100%;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}

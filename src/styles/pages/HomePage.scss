@@ -1,0 +1,138 @@
+@import '../base/variables';
+
+.homepage-main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    &__banner {
+        width: 100%;
+        min-height: 300px;
+        border-radius: 12px;
+        background: linear-gradient(to right, $secondaryAccentColor, $fifthAccentColor);
+        box-shadow: 0px 6px 20px rgba(65, 131, 230, 0.3);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        color: white;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            border-radius: 30px 260px 80px 120px;
+            background-color: rgba(79, 255, 211, 0.37);
+            filter: blur(100px);
+            left: 0;
+            bottom: 0;
+            animation: bannerBackgroundAnimation 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bannerBackgroundAnimation {
+            from {
+                left: 0;
+                top: 0;
+            }
+
+            to {
+                left: 80%;
+                top: -100%;
+            }
+        }
+
+        .banner__title {
+            margin-top: 8rem;
+            font-weight: 700;
+            font-size: 24px;
+            z-index: 1;
+            opacity: 0;
+            animation: slideDownWithOpacityAnimation 1s 0.1s ease forwards;
+        }
+
+        .banner__text {
+            font-size: 15px;
+            color: #E2E2E2;
+            z-index: 1;
+            opacity: 0;
+            animation: slideDownWithOpacityAnimation 1s 0.25s ease forwards;
+        }
+    }
+
+    &__container {
+        padding-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+
+        .container__card {
+            box-shadow: 0px 8px 15px rgba(150, 180, 209, 0.15);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: $primaryTransition;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+
+            @for $i from 1 to 9 {
+                &:nth-child(#{$i}) {
+                    animation: slideDownWithOpacityAnimation 0.6s ease forwards;
+                    animation-delay: $i * 0.2s;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                background: linear-gradient(to right, $fourthAccentColor, transparent);
+                left: 0;
+                top: 0;
+                width: 0px;
+                transition: $primaryTransition;
+                opacity: 0;
+                transform: scale(1.5);
+                filter: blur(40px);
+            }
+
+            &:hover {
+                transform: translateY(5px);
+            }
+
+            &:hover::before {
+                width: 100px;
+                opacity: 0.3;
+                filter: blur(40px);
+            }
+
+            &:hover .card__title, &:hover .card__text {
+                color: rgb(40, 119, 165);
+            }
+
+            .card__title {
+                font-size: 18px;
+                font-weight: 700;
+                transition: $secondaryTransition;
+            }
+
+            .card__text {
+                color: #888;
+                font-size: 15px;
+                transition: $secondaryTransition;
+            }
+        }
+    }
+
+    @keyframes slideDownWithOpacityAnimation {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../base/variables';
+
+footer {
+    font-size: 13px;
+    font-weight: 500;
+    color: $accentBgTextColor;
+    letter-spacing: 0.25px;
+    width: 85%;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

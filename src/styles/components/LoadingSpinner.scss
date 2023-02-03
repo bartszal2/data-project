@@ -1,0 +1,17 @@
+@import '../base/variables';
+
+.loading-spinner {
+    height: 80px;
+    width: 80px;
+    border: 8px solid $primaryAccentColor;
+    border-right: 8px solid $thirdAccentColor;
+    border-bottom: 8px solid $thirdAccentColor;
+    border-radius: 50%;
+    animation: rotateSpinnerAnimation 4s linear infinite;
+}
+
+@keyframes rotateSpinnerAnimation {
+    to {
+        transform: rotate(360deg);
+    }
+}

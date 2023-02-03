@@ -1,0 +1,17 @@
+@import './ListPageTheme/ListPageHeader';
+@import './ListPageTheme/ListPageDescription';
+@import './ListPageTheme/ListPageTable';
+
+@mixin ListPagePrimaryTheme($className) {
+    .#{$className} {
+        width: 80%;
+        flex: 1;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+
+        @include ListPageHeader;
+        @include ListPageDescription;
+        @include ListPageTable;
+    }
+}

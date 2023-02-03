@@ -1,0 +1,121 @@
+@import '../../base/variables';
+@import '../../mixins/centerContent';
+@import '../../mixins/table';
+
+@mixin InfoPageCard {
+    &__container {
+        min-height: 300px;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        gap: 2rem;
+
+        @include centerContent;
+
+        .container__error {
+            width: 100%;
+            text-align: center;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .container__card {
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #E2E2E2;
+            
+            @media screen and (max-width: 1200px) {
+                grid-column: span 4;
+            }
+
+            &--two-column-row-size {
+                grid-column: span 2;
+
+                @media screen and (max-width: 1200px) {
+                    grid-column: span 4;
+                }
+
+                .card__text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &--two-size {
+                grid-column: span 2;
+
+                @media screen and (max-width: 1200px) {
+                    grid-column: span 4;
+                }
+            }
+
+            &--three-size {
+            }
+
+            &--full-size {
+                grid-column: span 4;
+            }
+
+            .card__image {
+                width: 300px;
+                height: 300px;
+                border-radius: 8px;
+                background-color: #EEE;
+
+                @media screen and (max-width: 1200px) {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            .card__title {
+                color: #AAA;
+                font-size: 13px;
+                margin-bottom: 0.2rem;
+            }
+
+            .card__text {
+
+            }
+
+            .card__table-container {
+                height: 400px;
+                overflow-y: scroll;
+                margin-top: 1rem;
+                padding-right: 1rem;
+
+                @include table;
+            }
+
+            .card__comments-block {
+                margin-top: 1rem;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1rem;
+                height: 200px;
+                overflow-y: auto;
+                padding-right: 1rem;
+
+                .comments-block__element {
+                    padding: 1rem;
+                    font-size: 13px;
+                    border-radius: 6px;
+                    background-color: rgba(123, 169, 216, 0.1);
+
+                    .element__title {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: rgb(78, 118, 165);
+                        font-size: 12px;
+                    }
+
+                    .element__text {
+                        color: rgb(113, 141, 172);
+                    }
+                }
+            }
+        }
+    }
+}

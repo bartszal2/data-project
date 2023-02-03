@@ -1,0 +1,19 @@
+@import '../../mixins/centerContent';
+@import '../../mixins/table';
+
+@mixin ListPageTable {
+    &__table-container {
+        height: 500px;
+        overflow-y: auto;
+        padding-right: 1rem;
+
+        .table-container__error {
+            color: #444;
+            font-weight: 500;
+        }
+
+        @include centerContent;
+
+        @include table;
+    }
+}

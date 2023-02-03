@@ -1,0 +1,21 @@
+@import '../themes/InfoPageTheme/InfoPageHeader';
+@import '../themes/InfoPageTheme/InfoPageDescription';
+@import '../themes/InfoPageTheme/InfoPageCard';
+
+@import '../mixins/centerContent';
+
+@mixin InfoPagePrimaryTheme($className) {
+    .#{$className} {
+        width: 80%;
+        flex: 1;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+
+        @include centerContent;
+
+        @include InfoPageHeader;
+        @include InfoPageDescription;
+        @include InfoPageCard;
+    }
+}

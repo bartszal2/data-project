@@ -1,0 +1,110 @@
+@import '../base/variables';
+
+@mixin table {
+    .table-container__table {
+        width: 100%;
+        font-size: 15px;
+        border-collapse: collapse;
+        position: relative;
+
+        .table__head {
+            background: linear-gradient(to right, $primaryAccentColor, $fifthAccentColor);
+            color: white;
+        }
+
+            .table__th {
+                text-align: left;
+                padding: 0.6rem 0.4rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 12px;
+                
+                &:first-child {
+                    width: 50px;
+                    border-radius: 6px 0px 0px 6px;
+                    padding-left: 1rem;
+                }
+
+                &:last-child {
+                    border-radius: 0px 6px 6px 0px;
+                }
+
+                &--options {
+                    text-align: right;
+                    padding-right: 1rem;
+                }
+            }
+
+        .table__body {
+
+        }
+
+            .table__tr {
+
+                &:nth-child(even) {
+                    background-color: $separateAccentColor;
+                }
+            }
+
+                .table__td {
+                    text-align: left;
+                    padding: 0.7rem 0.4rem;
+                    
+                    &:first-child {
+                        width: 50px;
+                        font-weight: 700;
+                        padding-left: 1rem;
+                        font-size: 14px;
+                    }
+
+                    &--options {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                    &--error {
+                        text-align: center !important;
+                        padding: 1rem 0.4rem !important;
+                        position: absolute !important;
+                        font-weight: 400 !important;
+                        font-size: 15px !important;
+                        width: 100% !important;
+                    }
+
+                    &__image {
+                        width: 40px;
+                    }
+                }
+
+                    .table__button {
+                        width: max-content;
+                        border: none;
+                        padding: 0.5rem 0.8rem;
+                        border-radius: 8px;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        letter-spacing: 0.3px;
+                        color: $fourthAccentColor;
+                        background-color: $accentBgColor;
+                        margin-right: 0.5rem;
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        transition: $primaryTransition;
+
+                        &:hover {
+                            color: white;
+                            background-color: $fourthAccentColor;
+                        }
+                    }
+
+                    .table__image {
+                        background-color: rgba(123, 169, 216, 0.15);
+                        height: 40px;
+                        width: 40px;
+                        word-break: break-word;
+                        border-radius: 8px;
+                    }
+    }
+}
