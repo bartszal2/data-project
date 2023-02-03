@@ -27,7 +27,7 @@
 * React
     * React Router
 
-#### ⬆️ [Back to top](#data&projects)
+#### ⬆️ [Back to top](#data&#38projects)
 ---
 
 ## 📂 <a name="features">Features</a>
@@ -42,4 +42,4 @@ The most important functionalities of the project can be found below!
 * Information page for the selected photo
 * Error page - handling of not found pages
 
-#### ⬆️ [Back to top](#data&projects)
+#### ⬆️ [Back to top](#data&#38projects)
