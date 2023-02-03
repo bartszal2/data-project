@@ -1,6 +1,6 @@
-# **DATA&PROJECT**
+# **DATA and PROJECT**
 
-'DATA&PROJECT' is an API project that simulates working with data in a list and displaying full information about it.
+'DATA and PROJECT' is an API project that simulates working with data in a list and displaying full information about it.
 
 
 ▶️ [Live version of the project](https://bartszal2.github.io/data-project)
@@ -27,7 +27,7 @@
 * React
     * React Router
 
-#### ⬆️ [Back to top](#data&#38projects)
+#### ⬆️ [Back to top](#data-and-project)
 ---
 
 ## 📂 <a name="features">Features</a>
@@ -42,4 +42,4 @@ The most important functionalities of the project can be found below!
 * Information page for the selected photo
 * Error page - handling of not found pages
 
-#### ⬆️ [Back to top](#data&#38projects)
+#### ⬆️ [Back to top](#data-and-project)
