@@ -2,6 +2,7 @@
 
 'DATA and PROJECT' is an API project that simulates working with data in a list and displaying full information about it.
 
+⚠️ **The project has the source code in the 'src' folder and is available in the preview in the 'Live version of the project'**
 
 ▶️ [Live version of the project](https://bartszal2.github.io/data-project)
 
